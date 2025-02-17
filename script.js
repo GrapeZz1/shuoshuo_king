@@ -62,4 +62,22 @@ noButton.addEventListener("click", function () {
 });
 
 // Yes 按钮点击后，进入表白成功页面
-const loveTest = `!!!小弟小弟！!! ( >᎑<)♡︎ᐝ
+const loveTest = `!!!小弟小弟！!! ( >᎑<)♡︎ᐝ  ${
+  username ? `${safeUsername}  ♡︎ᐝ(>᎑< )` : ""
+}`;
+
+yesButton.addEventListener("click", function () {
+  // 先创建基础 HTML 结构
+  document.body.innerHTML = `
+        <div class="yes-screen">
+            <h1 class="yes-text"></h1>
+            <img src="images/hug.png" alt="拥抱" class="yes-image">
+        </div>
+    `;
+
+  // 确保用户名安全地插入
+  document.querySelector(".yes-text").innerText = loveTest;
+
+  // 禁止滚动，保持页面美观
+  document.body.style.overflow = "hidden";
+});
