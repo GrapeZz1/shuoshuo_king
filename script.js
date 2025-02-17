@@ -49,36 +49,17 @@ noButton.addEventListener("click", function () {
   }
 
   // 图片变化（前 5 次变化）
-  if (clickCount === 1) mainImage.src = "shocked.png"; // 震惊
-  if (clickCount === 2) mainImage.src = "think.png"; // 思考
-  if (clickCount === 3) mainImage.src = "angry.png"; // 生气
-  if (clickCount === 4) mainImage.src = "crying.png"; // 哭
-  if (clickCount === 5) mainImage.src = "crying.png"; // 之后一直是哭
-});
+  if (clickCount === 1) mainImage.src = "images/shocked.png"; // 震惊
+  if (clickCount === 2) mainImage.src = "images/think.png"; // 思考
+  if (clickCount === 3) mainImage.src = "images/angry.png"; // 生气
+  if (clickCount === 4) mainImage.src = "images/crying.png"; // 哭
+  if (clickCount === 5) mainImage.src = "images/crying.png"; // 之后一直是哭
 
-// 如果点击次数超过6次，隐藏 No 按钮
+  // 如果点击次数超过6次，隐藏 No 按钮
   if (clickCount >= 6) {
     noButton.style.display = "none";
   }
 });
 
 // Yes 按钮点击后，进入表白成功页面
-const loveTest = `!!!小弟小弟！!! ( >᎑<)♡︎ᐝ  ${
-  username ? `${safeUsername}  ♡︎ᐝ(>᎑< )` : ""
-}`;
-
-yesButton.addEventListener("click", function () {
-  // 先创建基础 HTML 结构
-  document.body.innerHTML = `
-        <div class="yes-screen">
-            <h1 class="yes-text"></h1>
-            <img src="hug.png" alt="拥抱" class="yes-image">
-        </div>
-    `;
-
-  // 确保用户名安全地插入
-  document.querySelector(".yes-text").innerText = loveTest;
-
-  // 禁止滚动，保持页面美观
-  document.body.style.overflow = "hidden";
-});
+const loveTest = `!!!小弟小弟！!! ( >᎑<)♡︎ᐝ
