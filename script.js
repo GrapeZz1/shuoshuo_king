@@ -53,7 +53,7 @@ noButton.addEventListener("click", function () {
   if (clickCount === 2) mainImage.src = "think.png"; // 思考
   if (clickCount === 3) mainImage.src = "angry.png"; // 生气
   if (clickCount === 4) mainImage.src = "crying.png"; // 哭
-  if (clickCount >= 5) mainImage.src = "crying.png"; // 之后一直是哭
+  if (clickCount === 5) mainImage.src = "crying.png"; // 之后一直是哭
 });
 
 // 如果点击次数超过6次，隐藏 No 按钮
