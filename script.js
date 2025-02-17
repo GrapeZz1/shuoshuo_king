@@ -56,6 +56,12 @@ noButton.addEventListener("click", function () {
   if (clickCount >= 5) mainImage.src = "crying.png"; // 之后一直是哭
 });
 
+// 如果点击次数超过6次，隐藏 No 按钮
+  if (clickCount >= 6) {
+    noButton.style.display = "none";
+  }
+});
+
 // Yes 按钮点击后，进入表白成功页面
 const loveTest = `!!!小弟小弟！!! ( >᎑<)♡︎ᐝ  ${
   username ? `${safeUsername}  ♡︎ᐝ(>᎑< )` : ""
