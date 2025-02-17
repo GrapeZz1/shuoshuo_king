@@ -35,7 +35,7 @@ noButton.addEventListener("click", function () {
   yesButton.style.transform = `scale(${yesSize})`;
 
   // 挤压 No 按钮，每次右移 50px
-  let noOffset = clickCount * 50;
+  let noOffset = clickCount * 150;
   noButton.style.transform = `translateX(${noOffset}px)`;
 
   // 让图片和文字往上移动
